@@ -1,489 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta http-equiv="Content-Type" content="text/html; charset=us-ascii"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="style.css" rel="stylesheet" />
-	<title>UI color Picker</title>
-	<meta name="Description" content="A collection to pick amazing colors for your next project in a web, Android or iOS. Your amazing UI needs amazing colors"><meta name="Keywords" content="UI ColorPicker">
-	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-	<link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css" rel="stylesheet" />
-	<link href="vendor/animate.min.css" rel="stylesheet" />
-	<link href="logo-lco.png" rel="icon" type="image/png" />
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed). The sticky value is not supported in IE or Edge 15 and earlier versions. However, for these versions the navbar will inherit default position */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
 </head>
-<body><!--	navbar starts here-->
-<nav class="navbar navbar-fixed-top title" style="border-bottom-color: #E0E0E0 ">
-<div class="container-fluid">
-<div class="collapse navbar-collapse text" id="bs-example-navbar-collapse-1">
-<div class="lco">UIColor Picker</div>
+<body>
 
-<div class="copyText">Click to copy color</div>
-
-<div class="lcoo"><a href="https://courses.learncodeonline.in">LearnCodeOnline</a></div>
-</div>
-<!-- /.navbar-collapse --></div>
-<!-- /.container-fluid --></nav>
-<!--style="margin: 0 auto"--><!--Red Shades--><!--
-    <div class="title">
-    <p class="copyText">Click to copy color</p>
-    <p class="lco">LearnCodeOnline</p>
-	</div>
--->
-
-<div>
-<div class="colTit">
-<p class="CoTi" style="margin-top: 80px">Rocking Red</p>
+<div class="header">
+  <h1>My Website</h1>
+  <p>A <b>responsive</b> website created by me.</p>
 </div>
 
-<div class="row"><!--       red1-->
-<div class="box col-xs-2 btn red1 integration-checklist__copy-button" data-clipboard-text="#E44236" id="#E44236">
-<p>#E44236</p>
-</div>
-<!--       red2-->
-
-<div class="box col-xs-2 btn red2" data-clipboard-text="#B83227" id="#B83227">
-<p>#B83227</p>
-</div>
-<!--        red3-->
-
-<div class="box col-xs-2 btn red3" data-clipboard-text="#D63031" id="#D63031">
-<p>#D63031</p>
-</div>
-<!--        red4-->
-
-<div class="box col-xs-2 btn red4" data-clipboard-text="#E84342" id="#E84342">
-<p>#E84342</p>
-</div>
-<!--        red5-->
-
-<div class="box col-xs-2 btn red5" data-clipboard-text="#FF3031" id="#FF3031">
-<p>#FF3031</p>
-</div>
-</div>
-
-<div class="row diGi"><!--       red6-->
-<div class="box col-xs-2 btn red6" data-clipboard-text="#BA2F16" id="#BA2F16">
-<p>#BA2F16</p>
-</div>
-<!--        red7-->
-
-<div class="box col-xs-2 btn red7" data-clipboard-text="#EC4849" id="#EC4849">
-<p>#EC4849</p>
-</div>
-<!--        red8-->
-
-<div class="box col-xs-2 btn red8" data-clipboard-text="#FF3E4D" id="#FF3E4D">
-<p>#FF3E4D</p>
-</div>
-<!--        red9-->
-
-<div class="box col-xs-2 btn red9" data-clipboard-text="#E71C23" id="#E71C23">
-<p>#E71C23</p>
-</div>
-<!--        red10-->
-
-<div class="box col-xs-2 btn red10" data-clipboard-text="#EA425C" id="#EA425C">
-<p>#EA425C</p>
-</div>
-</div>
-
-<div class="row diGi"><!--       red11-->
-<div class="box col-xs-2 btn red11" data-clipboard-text="#E8290B" id="#E8290B">
-<p>#E8290B</p>
-</div>
-<!--        red12-->
-
-<div class="box col-xs-2 btn red12" data-clipboard-text="#AE1438" id="#AE1438">
-<p>#AE1438</p>
-</div>
-<!--        red13-->
-
-<div class="box col-xs-2 btn red13" data-clipboard-text="#E83350" id="#E83350">
-<p>#E83350</p>
-</div>
-<!--        red14-->
-
-<div class="box col-xs-2 btn red14" data-clipboard-text="#FF4848" id="#FF4848">
-<p>#FF4848</p>
-</div>
-<!--        red15-->
-
-<div class="box col-xs-2 btn red15" data-clipboard-text="#FF362E" id="#FF362E">
-<p>#FF362E</p>
-</div>
-</div>
-</div>
-<!--	Blue Shades--><!--
-     <div class="title" style="margin-top: 25px">
-  
-    <div class="lco">LearnCodeOnline</div>
-      <div class="copyText">Click to copy color</div>
-	</div>
--->
-
-<div class="colTit">
-<p class="CoTi">Beautiful Blue</p>
+<div class="navbar">
+  <a href="#" class="active">Home</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#" class="right">Link</a>
 </div>
 
 <div class="row">
-<div class="box col-xs-2 btn" data-clipboard-text="#3498DB" id="blue1">
-<p>#3498DB</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#2475B0" id="blue2">
-<p>#2475B0</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#74B9FF" id="blue3">
-<p>#74B9FF</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#0A79DF" id="blue4">
-<p>#0A79DF</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#4834DF" id="blue5">
-<p>#4834DF</p>
-</div>
-</div>
-
-<div class="row diGi">
-<div class="box col-xs-2 btn" data-clipboard-text="#30336B" id="blue6">
-<p>#30336B</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#487EB0" id="blue7">
-<p>#487EB0</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#192A56" id="blue8">
-<p>#192A56</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#6A89CC" id="blue9">
-<p>#6A89CC</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#0A3D62" id="blue10">
-<p>#0A3D62</p>
-</div>
-</div>
-
-<div class="row diGi">
-<div class="box col-xs-2 btn" data-clipboard-text="#4BCFFA" id="blue11">
-<p>#4BCFFA</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#0ABDE3" id="blue12">
-<p>#0ABDE3</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#25CCF7" id="blue13">
-<p>#25CCF7</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#67E6DC" id="blue14">
-<p>#67E6DC</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#3C40C6" id="blue15">
-<p>#3C40C6</p>
-</div>
-</div>
-<!--    <footer class="gcGd diGi1">With great color, comes great design</footer>--><!--    Green Shades--><!--
-   <div class="title" style="margin-top:25 px">
-    <p class="copyText">Click to copy color</p>
-    <p class="lco">LearnCodeOnline</p>
-	</div>
--->
-
-<div class="colTit">
-<p class="CoTi">Golf Green</p>
-</div>
-
-<div class="row">
-<div class="box col-xs-2 btn" data-clipboard-text="#2ecc72" id="green1">
-<p>#2ecc72</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#26ae60" id="green2">
-<p>#26ae60</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#6ab04c" id="green3">
-<p>#6ab04c</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#6AB04A" id="green4">
-<p>#6AB04A</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#badc57" id="green5">
-<p>#badc57</p>
-</div>
-</div>
-
-<div class="row diGi">
-<div class="box col-xs-2 btn" data-clipboard-text="#43BE31" id="green6">
-<p>#43BE31</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#45CE30" id="green7">
-<p>#45CE30</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#10A881" id="green8">
-<p>#10A881</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#1BCA9B" id="green9">
-<p>#1BCA9B</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#7CEC9F" id="green10">
-<p>#7CEC9F</p>
-</div>
-</div>
-
-<div class="row diGi">
-<div class="box col-xs-2 btn" data-clipboard-text="#019031" id="green11">
-<p>#019031</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#A3CB37" id="green12">
-<p>#A3CB37</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#75DA8B" id="green13">
-<p>#75DA8B</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#53E0BC" id="green14">
-<p>#53E0BC</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#218F76" id="green15">
-<p>#218F76</p>
-</div>
-</div>
-<!--    <footer class="gcGd diGi1">With great color, comes great design</footer>--><!--    Yellow Shades--><!--
-    <div class="title" style="margin-top: 5px">
-    <p class="copyText">Click to copy color</p>
-    <p class="lco">LearnCodeOnline</p>
-	</div>
--->
-
-<div class="colTit">
-<p class="CoTi">Fresh Yellow</p>
-</div>
-
-<div class="row">
-<div class="box col-xs-2 btn" data-clipboard-text="#EEC213" id="yellow1">
-<p>#EEC213</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#F5C469" id="yellow2">
-<p>#F5C469</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#F4C724" id="yellow3">
-<p>#F4C724</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#F0DF87" id="yellow4">
-<p>#F0DF87</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#DFAF2B" id="yellow5">
-<p>#DFAF2B</p>
-</div>
-</div>
-
-<div class="row diGi">
-<div class="box col-xs-2 btn" data-clipboard-text="#FAC42F" id="yellow6">
-<p>#FAC42F</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#F3B63A" id="yellow7">
-<p>#F3B63A</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#FBD28B" id="yellow8">
-<p>#FBD28B</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#F3B431" id="yellow9">
-<p>#F3B431</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#FAD02E" id="yellow10">
-<p>#FAD02E</p>
-</div>
-</div>
-
-<div class="row diGi">
-<div class="box col-xs-2 btn" data-clipboard-text="#E5B143" id="yellow11">
-<p>#E5B143</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#F3CC79" id="yellow12">
-<p>#F3CC79</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#F9DDA4" id="yellow13">
-<p>#F9DDA4</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#FFF222" id="yellow14">
-<p>#FFF222</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#E1DA00" id="yellow15">
-<p>#E1DA00</p>
-</div>
-</div>
-<!--    <footer class="gcGd diGi1">With great color, comes great design</footer>--><!--    Grey shades--><!--
-    <div class="title" style="margin-top: 5px">
-    <p class="copyText">Click to copy color</p>
-    <p class="lco">LearnCodeOnline</p>
-	</div>
--->
-
-<div class="colTit">
-<p class="CoTi">Old Grey</p>
-</div>
-
-<div class="row">
-<div class="box col-xs-2 btn" data-clipboard-text="#7B8788" id="grey1">
-<p>#7B8788</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#99AAAB" id="grey2">
-<p>#99AAAB</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#2C3335" id="grey3">
-<p>#2C3335</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#616C6F" id="grey4">
-<p>#616C6F</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#DAE0E2" id="grey5">
-<p>#DAE0E2</p>
-</div>
-</div>
-
-<div class="row diGi">
-<div class="box col-xs-2 btn" data-clipboard-text="#535C68" id="grey6">
-<p>#535C68</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#333945" id="grey7">
-<p>#333945</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#2F363F" id="grey8">
-<p>#2F363F</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#586776" id="grey9">
-<p>#586776</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#8395A7" id="grey10">
-<p>#8395A7</p>
-</div>
-</div>
-
-<div class="row diGi">
-<div class="box col-xs-2 btn" data-clipboard-text="#A4B0BD" id="grey11">
-<p>#A4B0BD</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#777E8B" id="grey12">
-<p>#777E8B</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#758AA2" id="grey13">
-<p>#758AA2</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#47535E" id="grey14">
-<p>#47535E</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#4C4B4B" id="grey15">
-<p>#4C4B4B</p>
-</div>
-</div>
-<!--    <footer class="gcGd diGi1">With great color, comes great design</footer>--><!--        Might be Great--><!--
-        <div class="title" style="margin-top: 5px">
-    <p class="copyText">Click to copy color</p>
-    <p class="lco">LearnCodeOnline</p>
-	</div>
--->
-
-<div class="colTit">
-<p class="CoTi">Might Be Great</p>
-</div>
-
-<div class="row">
-<div class="box col-xs-2 btn" data-clipboard-text="#EAF0F1" id="mbg1" style="color: black">
-<p>#EAF0F1</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#E74292" id="mbg2">
-<p>#E74292</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#01CBC6" id="mbg3">
-<p>#01CBC6</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#BB2CD9" id="mbg4">
-<p>#BB2CD9</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#8B78E6" id="mbg5">
-<p>#8B78E6</p>
-</div>
-</div>
-
-<div class="row diGi" style="margin-bottom: 90px">
-<div class="box col-xs-2 btn" data-clipboard-text="#00CCCD" id="mbg6">
-<p>#00CCCD</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#1287A5" id="mbg7">
-<p>#1287A5</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#EA7773" id="mbg8">
-<p>#EA7773</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#2B2B52" id="mbg9">
-<p>#2B2B52</p>
-</div>
-
-<div class="box col-xs-2 btn" data-clipboard-text="#F5BCBA" id="mbg10">
-<p>#F5BCBA</p>
-</div>
-</div>
-<!--
-    <div class="row diGi">
-        <div class="box col-xs-2 btn" id="grey11" data-clipboard-text="#A4B0BD"><p>#A4B0BD</p></div>
-        <div class="box col-xs-2 btn" id="grey12" data-clipboard-text="#777E8B"><p>#777E8B</p></div>
-        <div class="box col-xs-2 btn" id="grey13" data-clipboard-text="#758AA2"><p>#758AA2</p></div>
-        <div class="box col-xs-2 btn" id="grey14" data-clipboard-text="#47535E"><p>#47535E</p></div>
-        <div class="box col-xs-2 btn" id="grey15" data-clipboard-text="#4C4B4B"><p>#4C4B4B</p></div>
-    </div>
-    
--->
-
-<footer class="gcGd diGi1 fixed-bottom" style="height: 50px">
-<div class="gcGd">With great color, comes great design.</div>
-</footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><!--   <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>--><script src="vendor/clipboard.js"></script><script src="vendor/clipboard.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script src="/js/script.js"></script><script src="/js/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script></body>
+  <div class="side">
+    <h2>About Me</h2>
+    <h5>Photo of me:</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    <h3>More Text</h3>
+    <p>Lorem ipsum dolor sit ame.</p>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div>
+  </div>
+  <div class="main">
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Dec 7, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <br>
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Sep 2, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+
+</body>
 </html>
